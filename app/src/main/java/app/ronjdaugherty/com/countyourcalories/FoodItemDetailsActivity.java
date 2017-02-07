@@ -47,12 +47,8 @@ public class FoodItemDetailsActivity extends AppCompatActivity {
         calories.setTextSize(34.9f);
         calories.setTextColor(Color.RED);
 
-        shareButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                shareCals();
-            }
-        });
+        shareButton.setOnClickListener(v -> shareCals());
+
     }
     public void shareCals() {
 

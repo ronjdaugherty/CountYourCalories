@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import data.DatabaseHandler;
 import model.Food;
@@ -28,15 +31,13 @@ public class MainActivity extends AppCompatActivity {
         foodCals = (EditText) findViewById(R.id.caloriesEditText);
         submitButton = (Button) findViewById(R.id.submitButton);
 
-        submitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                saveDataToDB();
 
 
-            }
-        });
+
+
+        submitButton.setOnClickListener(v -> saveDataToDB());
+
+
     }
 
     private void saveDataToDB() {
